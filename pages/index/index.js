@@ -4,6 +4,7 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
+    date: '2016-09-01',
     expertList: [{ //假数据
       img: "avatar.png",
       name: "欢顔",
@@ -40,6 +41,15 @@ Page({
         scrollLeft: 0
       })
     }
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  create_new:function(e){
+
   },
   onLoad: function () {
     var that = this;
