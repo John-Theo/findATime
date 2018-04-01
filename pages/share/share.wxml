@@ -1,0 +1,26 @@
+<view class='back'>
+<view class='card'>
+  <view class='title'>什么时候开会</view>
+  <view class='page-col'>
+    <view>
+      <label class='number2'>4</label>
+      <label class='scale2'>月</label>
+      <label class='number2'>1</label>
+      <label class='scale2'>日</label>
+    </view>
+    <view class='week2'>星期四</view>
+    <view class='scale'>时间段如上所定，请大家务必出席</view>
+    <view class='scale'>具体时间和地点另行通知</view>
+    <image src='../../findATime/test.png' style='height:100px;width:100px;margin-bottom:1.5rem'></image>
+  </view>
+  <button class='invite'>发送通知</button>
+</view>
+</view>
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" style="{{currentTab==1?'box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)':''}}">
+  <navigator url="../index/index?currentTab=0" class="tab-item">
+    <image src='../../findATime/new.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
+  </navigator>
+  <navigator url="../index/index?currentTab=1" class="tab-item" >
+     <image src='../../findATime/his.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
+  </navigator>
+</scroll-view>

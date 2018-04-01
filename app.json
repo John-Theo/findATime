@@ -1,13 +1,15 @@
 {
   "pages":[
+    "pages/result/result",
+    "pages/share/share",
+    "pages/calendar/calendar",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/create_new/create_new"
+    "pages/logs/logs"    
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor":"#64c80a"
   }
 }
