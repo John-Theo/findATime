@@ -3,6 +3,7 @@ Page({
   data: {
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
+    winHeight:0,
     select:[
       { morning: false, lunch: false, afternoon: false, dinner: false, evening: false },
       { morning: false, lunch: false, afternoon: false, dinner: false, evening: false },
@@ -30,5 +31,18 @@ Page({
     this.setData({[x]:!now})
   },
   onLoad: function () {
+    var that = this;
+    //  高度自适应
+    wx.getSystemInfo({
+      success: function (res) {
+        var clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR = 750 / clientWidth;
+        var calc = clientHeight * rpxR;
+        that.setData({
+          winHeight: calc
+        });
+      }
+    });
   }
 })

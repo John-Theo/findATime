@@ -11,9 +11,9 @@
     <view class='week2'>星期四</view>
     <view class='scale'>时间段如上所定，请大家务必出席</view>
     <view class='scale'>具体时间和地点另行通知</view>
-    <image src='../../findATime/test.png' style='height:100px;width:100px;margin-bottom:1.5rem'></image>
+    <image src='../../findATime/test.png'class="pic"></image>
   </view>
-  <button class='invite'>发送通知</button>
+  <button class='invite' style=''>发送通知</button>
 </view>
 </view>
 <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" style="{{currentTab==1?'box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)':''}}">

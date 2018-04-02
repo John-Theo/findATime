@@ -70,7 +70,7 @@
   border-radius: 7px;
   box-shadow: 0 0 10px 2px rgba(150, 150, 150, 0.1);
   margin: 0.5rem 1rem;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding-top: 0.5rem;
   overflow: hidden;
 }
 .name{
@@ -100,9 +100,10 @@ font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   align-items: center;
+  text-align: left;
 }
 .info{
   font-size: 13px;
@@ -149,13 +150,9 @@ font-size: 12px;
   font-size: 15px;
   font-weight: 600;
   color: #64c80a;
-  width: 19rem;
   border-radius: 0;
   padding-top: 0.3rem;
-}
-.part-one{
-  width: 12rem;
-  padding-left: 3.5rem
+  width: 100%;
 }
 .delete{
   background: rgba(51, 51, 51, 0.9);

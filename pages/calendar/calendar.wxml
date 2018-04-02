@@ -1,6 +1,6 @@
 <view class='back'>
 <view class='card'>
-  <view class='con'>
+  <view class='con' >
     <view class="car ">
       <label class='date'></label>
       <label class='week'></label>

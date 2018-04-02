@@ -54,6 +54,7 @@
 .scale{
   font-size: 10px;
   color: #aaa;
+  margin-bottom: 0.2rem;
 }
 .scale2{
   font-size: 15px;
@@ -64,11 +65,27 @@
   color: #64c80a;
   width: 3rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .page-col{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1rem;
+}
+.invite{
+  background-color: #eee;
+  height: 3rem;
+  font-size: 13px;
+  font-weight: 800;
+  color: #64c80a;
+  border-radius: 0;
+  padding-top: 0.5rem;
+  margin-top: 2rem; 
+}
+.pic{
+  height:100px;
+  width:100px;
+  margin-bottom:0.5rem;
+  margin-top:1rem;
 }

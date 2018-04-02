@@ -67,8 +67,9 @@
   border: 0.5rem black solid;
 }
 .con{
-  width: 15rem;
-  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+  width: 80%;
+  margin: 8% 10% 0 10%;
+  
 }
 .date{
   font-size: 15px;
@@ -100,7 +101,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding:  1.5rem 1rem 1rem 1rem;
+  padding:  1.5rem 10% 1rem 10%;
 }
 .code-input{
   border: 1.5px #64c80a solid;
@@ -128,7 +129,7 @@
   font-size: 13px;
   font-weight: 800;
   color: #64c80a;
-  width: 19rem;
   border-radius: 0;
   padding-top: 0.5rem;
+  width:100%;
 }

@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/result/result",
+    "pages/index/index",
     "pages/share/share",
     "pages/calendar/calendar",
-    "pages/index/index",
+    "pages/result/result",
     "pages/logs/logs"    
   ],
   "window":{

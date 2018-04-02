@@ -38,10 +38,9 @@
   font-size: 13px;
   font-weight: 800;
   color: #64c80a;
-  width: 19rem;
   border-radius: 0;
   padding-top: 0.5rem;
-  
+  margin-top: 4rem; 
 }
 .title{
   font-size: 18px;

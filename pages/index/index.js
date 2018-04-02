@@ -24,7 +24,7 @@ Page({
   // 点击标题切换当前页时改变样式
   swichNav: function (e) {
     this.setData({ delete_item: false })
-    var cur = e.target.dataset.current;
+    var cur = e.currentTarget.dataset.current;
     if (this.data.currentTaB == cur) { return false; }
     else {
       this.setData({
@@ -70,7 +70,6 @@ Page({
           clientWidth = res.windowWidth,
           rpxR = 750 / clientWidth;
         var calc = clientHeight * rpxR;
-        console.log(calc)
         that.setData({
           winHeight: calc
         });
