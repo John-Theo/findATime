@@ -1,8 +1,7 @@
 <!--index.wxml-->
-
 <view > 
     <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-        <swiper-item >
+        <swiper-item class="con" style="height:{{winHeight-131.25}}rpx;{{currentTab==0? '':'display:none'}}">
           <view class='card flex-wrap'>
             <form bindsubmit="create_new" class=''>
             <view class='createN'>

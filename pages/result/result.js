@@ -5,7 +5,7 @@ Page({
     scrollLeft: 0, //tab标题的滚动条位置
     share:true,
     winWidth: '',
-    winHeight: '',
+    winHeight: "",
   },
   onLoad: function () {
     var that = this;
