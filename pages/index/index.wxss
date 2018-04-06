@@ -1,23 +1,18 @@
 /**index.wxss**/
-.tab-h{
-    height: 131.25rpx;
-    width: 100%; 
-    overflow: hidden;
-    line-height: 100rpx;
-    background: #F7F7F7; 
-    font-size: 12px; 
-    position: fixed;
-    bottom: 0;
-    padding: 0rpx 70rpx; 
-    background-color:#64c80a;
+.nav_pic{
+  height: 100rpx;
+  width: 100rpx;
+  margin-bottom: 0rpx;  
 }
-.tab-item{
-  margin:0.5rem 36rpx;
-  display: inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 30%;
-  color: white;
+.tab-h{
+  /* background-color: #ddd;  */
+  width: 80%; 
+  height: 20%;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .tab-item.active{color: white;position: relative;}
 .tab-item.active:after{
@@ -31,14 +26,19 @@
   left: 70rpx;
   border-radius: 16rpx;
 }
+.del_icon{
+  margin-bottom:0.5rem;
+  color: #666;
+}
 .item-ans{ 
   display: flex; 
   flex-grow: row no-wrap;
   justify-content: space-between; 
-  padding: 30rpx;
+  padding: 0 80rpx;
   box-sizing: border-box; 
   height: 180rpx;
   align-items: center;
+  background-color: #fff;
   border-bottom: 1px solid #F2F2F2;
   border-radius: 7px;
   margin-bottom: 0.5rem;
@@ -52,38 +52,64 @@
   margin-top: 0rpx;
 }
 .scoll-h{
-  height: 90%;
+  height: 80%;
   padding:0 5%;
-  }
+}
+.newproj{
+  width: 60%;
+  letter-spacing: 10rpx;
+  font-size: 34rpx;
+  margin: 100rpx 20% 0 20%;
+}
 .picker{
   margin-top: 0.5rem;
+  color: #888;
   padding: 0.4rem 0.5rem;
-  border-radius:7px;
-  font-size: 13px;
-  border: 1.5px #64c80a solid;
-  width: 5rem;
-  height: 1rem
+  border-radius:5px;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  border: 1px #64c80a solid;
+  width: 180rpx;
+  height: 36rpx;
 }
+
 .card{
   background-color: #ffffff;
   border-radius: 7px;
-  box-shadow: 0 0 10px 2px rgba(150, 150, 150, 0.1);
-  margin: 0rem 1rem;
-  padding-top: 0.5rem;
-  overflow: hidden;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+  width: 90%;
+   margin-top: 16%;  
+  padding: 100rpx 0;
+
+  display: flex;   
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: space-around;   
+  padding-top: 20rpx;
+  overflow: hidden; 
+
+  /* visibility: hidden; */
 }
+
 .name{
-  font-size: 17px;
-  color: #ccc;
-  font-weight: 600;
+  font-size: 40rpx;
+  letter-spacing: 5rpx;
+  line-height: 60rpx;
+  font-weight: bolder;
+  /* color: #ccc; */
   text-align: center;
-}
+} 
 .input_name{
-  height: 2rem;
-  padding: 1.5rem 0 0.3rem 0;
-  border-bottom: 1.5px #64c80a solid;
+  height: 80rpx;
+  font-size: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 5rpx;
+  /* color: #888; */
+  font-weight: bolder;
+  border-bottom: 1rpx #64c80a solid; 
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin: 120rpx 100rpx 60rpx 100rpx;
 }
 .title{
   font-size: 13px;
@@ -95,7 +121,11 @@ margin-top: 0.6rem;
 height: 2rem;
 font-size: 12px;
 }
-.createN{
+/* .container{
+  width:80%;
+   height:90%; 
+} */
+ .createN{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -103,34 +133,17 @@ font-size: 12px;
   align-content: center;
   align-items: center;
   text-align: left;
-}
+} 
 .info{
-  font-size: 13px;
+  font-size: 30rpx;
+  color: #888;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin: 20rpx 10rpx;
 }
-.info2{
-  font-size: 13px;
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
-  font-weight: 600;
-}
-.code{
-  font-size: 13px;
-  margin-left: 1rem;
-  border-radius:7px;
-  border: 1.5px #64c80a solid;
-  width: 5rem;
-  padding: 0.2rem 0.3rem;
-}
-.p-code{
-  font-weight: 400;
-}
-.warn{
+
+/* .warn{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -142,15 +155,20 @@ font-size: 12px;
   color: #aaa;
   font-size: 9px;
   margin-left: 0.5rem;
+} */
+page{
+  height: 100%;
+  /* background-color: #fff; */
+   background-color: #64c80a; 
+   overflow: hidden;
 }
-.back{
-  background-color: #eee;
-  height: 3rem;
-  font-size: 15px;
-  font-weight: 600;
-  color: #64c80a;
-  border-radius: 0;
-  width: 100%;
+.page{  
+  display: flex;   
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: flex-start;   
+  padding-top: 20rpx;
+  overflow: hidden; 
 }
 .delete{
   background: rgba(51, 51, 51, 0.9);
@@ -173,9 +191,4 @@ font-size: 12px;
   z-index: 99;
   color: white;
   margin-right: 3.5rem;
-}
-.con{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

@@ -1,4 +1,4 @@
-<view class='back'style="height:{{winHeight-131.25}}rpx">
+<view class='back'>
 <view class='card'>
   <view class='title'>什么时候开会</view>
   <view class='page-col'>

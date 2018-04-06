@@ -1,56 +1,50 @@
 <!--index.wxml-->
-<view > 
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-        <swiper-item class="con" style="height:{{winHeight-131.25}}rpx;{{currentTab==0? '':'display:none'}}">
-          <view class='card flex-wrap'>
-            <form bindsubmit="create_new" class=''>
-            <view class='createN'>
-              <input type='text' placeholder-class='name' placeholder='填写项目名称' class='input_name'></input>
-              <label class='info'>请朋友们从
-                <picker mode="date" value="{{date}}" start="2018-01-01" end="2022-01-01" bindchange="bindDateChange">
-                  <view class="picker">{{date}}</view>
-               </picker>
-              </label>
-              <label class='info'>开始的7天内，选空余时间</label>
-              <label class='info2'>时间码
-                <input type='text' class='code' placeholder-class='p-code' placeholder='填写时间码'></input>
-              </label>
-              <view class="warn">
-                <i class="fa fa-warning" style="color:#64c80a"></i>
-                <label class='warn-text'>请妥善保管您的时间码，每一个拥有您时间码的用户都可以在您的项目内投票。</label>
-              </view>
-              </view>
-              <button class='back' formType="submit">建 立 项 目</button>
-            </form>
+
+<view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item class="page">
+      <view class='card'>
+
+        <form bindsubmit="create_new" class=''>
+          <view class='createN'>
+            <input type='text' placeholder-class='name' placeholder='填写项目名称' class='input_name' bindinput='mytextInput' maxlength='20' value="{{proj_name}}"></input>
+            <label class='info'>
+              请朋友们从
+              <picker mode="date" value="{{date}}" start="{{date}}" end="2020-01-01" bindchange="bindDateChange" style="margin-left:20rpx;">
+                <view class="picker">{{date}}</view>
+              </picker>
+            </label>
+            <label class='info'>开始的7天内，选空余时间</label>
           </view>
-        </swiper-item>
-        <swiper-item>
-            <scroll-view scroll-y="true" class="scoll-h">
-                <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
-                      <view class="item-ans {{delete_item? 'delete d-back':'white'}}" bindlongtap='delete_item'>
-                          <view class="expertInfo">
-                            <view class="title">什么时候开会</view>
-                            <view class="answerHistory {{delete_item? 'delete d-icon':''}}">10人已填</view>
-                          </view>
-                          <view class="btn ">
-                          <i class="fa fa-trash-o  {{delete_item? 'd-display fa-2x':'d-none fa-1x'}}" style="margin-bottom:0.5rem;"></i>
-                          <navigator url="../calendar/calendar?itemid=1234">
-                            <i class="fa fa-pencil fa-1x {{delete_item? 'd-icon':''}}" style="margin-bottom:0.5rem;"></i></navigator>
-                            <navigator url="../result/result?itemid=1234">
-                            <i class="fa fa-eye fa-1x {{delete_item? 'd-icon':''}}" style="margin-bottom:0.5rem;"></i></navigator>
-                          </view>
-                        </view>
-                    
-                </block>
-            </scroll-view>
-        </swiper-item>
-    </swiper>
-    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" style="{{currentTab==1?'box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)':''}}">
-        <view id="v1" class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">
-          <image id="img1" src='../../findATime/new.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
-        </view>
-        <view id="v2" class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">
-          <image id="img2" src='../../findATime/his.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
-        </view>
-    </scroll-view>
+          <button class='newproj' formType="submit" bindtap='creatProj' type="primary" plain="true">建立项目</button>
+        </form>
+
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h page">
+        <block wx:for="{{itemIdList}}" wx:key="itemIdList.name">
+          <view class="item-ans">
+            <view class="expertInfo" id="{{item.hex}}" bindtap='detail'>
+              <view class="title">{{item.name}}</view>
+              <view class="answerHistory">{{item.num}}人已填</view>
+            </view>
+            <view id="{{item.hex}}" bindtap='delete_item'>
+              <i class="fa fa-trash-o del_icon"></i>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <view class="page">
+    <view class="tab-h">
+      <view class="{{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">
+        <image src='../../findATime/new.png' class="nav_pic"></image>
+      </view>
+      <view class="{{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">
+        <image src='../../findATime/his.png' class="nav_pic"></image>
+      </view>
+    </view>
+  </view>
 </view>
