@@ -40,10 +40,10 @@
   <view class="page">
     <view class="tab-h">
       <view class="{{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">
-        <image src='../../findATime/new.png' class="nav_pic"></image>
+        <image src='../../img/new.png' class="nav_pic"></image>
       </view>
       <view class="{{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">
-        <image src='../../findATime/his.png' class="nav_pic"></image>
+        <image src='../../img/his.png' class="nav_pic"></image>
       </view>
     </view>
   </view>

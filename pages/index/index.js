@@ -75,7 +75,7 @@ Page({
   detail: function(e) {
     // console.log(e.currentTarget.id);
     wx.navigateTo({
-      url: "../calendar/calendar?itemid=" + e.currentTarget.id,
+      url: "../calendar/calendar?pid=" + e.currentTarget.id,
     })
   },
   mytextInput: function (e) {
