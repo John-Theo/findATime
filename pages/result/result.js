@@ -15,9 +15,9 @@ Page({
     projectId: 'default',
     ischosen: 'hidden',
     max_time: 1,
-    tar_date: '等你长按确定时间哦！',
+    tar_date: '',
     ownerid: '',
-
+    slot:''
   },
   submita: function (e) {
     var ipid = this.data.projectId;
@@ -27,7 +27,6 @@ Page({
       method: 'GET',
       data: this.data.select,
       success: function (res) {
-        console.log(res.data)
         wx.showToast({
           title: '已提交！',
         })
@@ -36,7 +35,7 @@ Page({
   },
   result: function (e) { wx.navigateTo({ url: "../result/result?pid=0" }) },
   select_slot: function (e) {
-    var info = e.target.id;
+    var info = e.currentTarget.id;
     var i = info[0];
     var j = info[1];
     var for_row = this.data.for_row;
@@ -46,11 +45,11 @@ Page({
         content: '请问卷的发起者来确定吧！',
       })
     }
-    // console.log(this.data.total);
     else {
       this.setData({
         tar_date: '约 ' + for_row[j].date + '号（星期' + for_row[j].day + '）的' + time[i - 1] + ' ！',
         ischosen: 'visible',
+        slot: info
       });
       wx.setClipboardData({
         data: '我们就 ' + this.data.tar_date + '投票结果戳链接查看！',
@@ -67,16 +66,13 @@ Page({
   },
 
   onShareAppMessage: function (res) {
-
-    console.log(this.name);
     if (res.from == 'button') {
-      // console.log(res.target.id);
     }
     return {
       title: this.data.tar_date,
-      path: '/pages/result/result?pid=' + this.data.projectId,
+      path: '/pages/result/result?pid=' + this.data.projectId+'&slot='+this.data.slot,
       success: function (res) {
-        console.log(tmp);
+        //console.log(tmp);
       },
     }
   },
@@ -89,8 +85,11 @@ Page({
     this.setData({
       projectId: options.pid,
     });
-    // console.log(this.data.select);
-    // console.log(this.data.projectId);
+    if (options.slot != null) {
+      this.setData({
+        slot: options.slot,
+      });
+    }
     wx.showToast({
       title: '获取数据...',
       icon: 'loading',
@@ -114,7 +113,6 @@ Page({
                   method: 'GET',
                   success: function (res) {
                     that.setData({ owner_id: res.data })
-                    // console.log(that.data.owner_id)
                   }
                 });
                 wx.request({
@@ -124,7 +122,19 @@ Page({
                     if (res.data == 'NotExist') { console.log('Nobody filled...') }
                     else {
                       that.setData({ total: res.data.total, for_row: res.data.other })
-                      console.log(res.data)
+                      if (that.data.slot != '') {
+                        var info = that.data.slot;
+                        var i = info[0];
+                        var j = info[1];
+                        var for_row = that.data.for_row;
+                        var time = ['上午', '中饭', '下午', '晚饭', '晚上'];
+                        that.setData({
+                          tar_date: '约 ' + for_row[j].date + '号（星期' + for_row[j].day + '）的' + time[i - 1] + ' ！',
+                          ischosen: 'visible',
+                        });
+                      }else{
+                        that.setData({ tar_date:"等你长按确定时间哦！"})
+                      }
                     }
                     var max = 0;
                     var list = that.data.total;
@@ -136,7 +146,6 @@ Page({
                         }
                       }
                     }
-                    // console.log(max);
                     that.setData({ max_time: max })
                     wx.hideToast();
                   }
@@ -147,5 +156,5 @@ Page({
         });
       }
     })
-  },
+  }
 })

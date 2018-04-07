@@ -62,6 +62,8 @@ Page({
     var item_id = e.currentTarget.id;
     var i=item_id.slice(1, 2);
     var j=item_id.slice(0, 1);
+    console.log("why?")
+    console.log(this.data.select[i])
     var time_slot="",now;
     switch(j){
       case '1': time_slot = 'm'; now = this.data.select[i].m; break;
@@ -82,7 +84,7 @@ Page({
   onShareAppMessage: function (res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
-      console.log(res.target)
+      //console.log(res.target)
     }
     return {
       title: '告诉我你的空余时间',
@@ -135,7 +137,8 @@ Page({
                     if (res.data == 'NotExist') { console.log('Nobody filled...') }
                     else {
                       that.setData({ total: res.data.total, for_row:res.data.other })
-                      // console.log(res.data.other)
+                      console.log("this is")
+                      console.log(res.data.other)
                     }
                     wx.hideToast();
                   }
