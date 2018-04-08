@@ -4,6 +4,15 @@
   width: 100rpx;
   margin-bottom: 0rpx;  
 }
+.icon{
+  width:100rpx;
+  height:100rpx;
+  background-color:#eee;
+  border-radius: 50%;
+  display: flex;   
+  align-items: center;    
+  justify-content: center;     
+}
 .tab-h{
   /* background-color: #ddd;  */
   width: 80%; 
@@ -27,8 +36,10 @@
   border-radius: 16rpx;
 }
 .del_icon{
-  margin-bottom:0.5rem;
   color: #666;
+}
+.expertInfo{
+  padding-top: 7rpx;
 }
 .item-ans{ 
   display: flex; 
@@ -45,7 +56,7 @@
   width: 90%;
   z-index: -99;
   }
-.expertInfo{font-size: 12px;flex-grow: 1;color: #B0B0B0;line-height: 1.5em;}
+ .filled{font-size: 24rpx; color:#888; margin-top: 10rpx;} 
 .btn{flex-grow: 1; color: #64c80a;display: flex;justify-content: space-around;}
 .tab-content{
   background-color: #64c80a;
@@ -79,7 +90,7 @@
   border-radius: 7px;
   box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
   width: 90%;
-   margin-top: 16%;  
+  margin-top: 16%;  
   padding: 100rpx 0;
 
   display: flex;   
@@ -112,20 +123,16 @@
   margin: 120rpx 100rpx 60rpx 100rpx;
 }
 .title{
-  font-size: 13px;
+  font-size: 30rpx;
   color: black;
-  font-weight: 600;
+  font-weight: bolder;
 }
 .submit{
 margin-top: 0.6rem;
 height: 2rem;
 font-size: 12px;
 }
-/* .container{
-  width:80%;
-   height:90%; 
-} */
- .createN{
+.createN{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -142,20 +149,6 @@ font-size: 12px;
   justify-content: space-between;
   margin: 20rpx 10rpx;
 }
-
-/* .warn{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-.warn-text{
-  width:10rem;
-  color: #aaa;
-  font-size: 9px;
-  margin-left: 0.5rem;
-} */
 page{
   height: 100%;
   /* background-color: #fff; */

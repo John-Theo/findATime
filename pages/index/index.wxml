@@ -27,10 +27,12 @@
           <view class="item-ans">
             <view class="expertInfo" id="{{item.hex}}" bindtap='detail'>
               <view class="title">{{item.name}}</view>
-              <view class="answerHistory">{{item.num}}人已填</view>
+              <view class="filled">{{item.num}}人已填</view>
             </view>
             <view id="{{item.hex}}" bindtap='delete_item'>
-              <i class="fa fa-trash-o del_icon"></i>
+            <view class="icon">
+              <i class="fa fa-trash-o del_icon fa-1x"></i>
+              </view>
             </view>
           </view>
         </block>

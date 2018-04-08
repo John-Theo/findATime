@@ -66,7 +66,7 @@ Page({
           title: '创建成功',
         })
         wx.navigateTo({
-          url: '../calendar/calendar?itemid='+res.data,
+          url: '../calendar/calendar?pid='+res.data,
         })
         console.log(res.data)
       }
