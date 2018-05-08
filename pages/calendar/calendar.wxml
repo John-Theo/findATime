@@ -1,0 +1,52 @@
+<view class='page'>
+  <view class='card'>
+    <view class='con'>
+
+      <view class="line">
+        <view class="row_head"></view>
+        <view class="c1 title">
+          <label class='long'>上午</label>
+          <label class='short'>中饭</label>
+          <label class='long'>下午</label>
+          <label class='short'>晚饭</label>
+          <label class='long'>晚上</label>
+        </view>
+      </view>
+
+      <view wx:for="{{for_row}}" wx:key="id">
+        <view class="line">
+          <view class="row_head">
+            <label class='date'>{{item.date}}</label>
+            <label class='week'>{{item.day}}</label>
+          </view>
+          <view wx:for="{{for_daytime}}" wx:for-item="i" wx:key="id">
+            <view class="c1">
+              <view id='{{i.id}}{{item.id}}' class="c{{2+i.id%2}} {{select[item.id][i.time]==1? 'selected':'unselet'}}" bindtap='select_slot'>
+              {{total[item.id][i.time]==0? '':total[item.id][i.time]}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn_sec">
+        <button class='post' bindtap='submita'>提交选择</button>
+        <button class='invite' open-type="share">
+          <!-- 分发问卷 -->
+           <i class="fa fa-share-alt fa-1x" style="color: #64c80a"></i> 
+        </button>
+        <button class='invite' bindtap='result'>
+          <!-- 查看详情 -->
+           <i class="fa fa-bar-chart fa-1x" style="color: #64c80a"></i> 
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="tab-h">
+    <view bindtap='toNew'>
+      <image src='../../findATime/new.png' class="nav_pic"></image>
+    </view>
+    <view bindtap='toHis'>
+      <image src='../../findATime/his.png' class="nav_pic"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,128 @@
+<view class='back'>
+<view class='card'>
+  <view class='con' >
+    <view class="car ">
+      <label class='date'></label>
+      <label class='week'></label>
+      <view class="c1 "><label class='long'>上午</label></view>
+      <view class="c1 ">
+      <label class='short'>中饭</label></view>
+      <view class="c1 ">
+      <label class='long'>下午</label></view>
+      <view class="c1 ">
+      <label class='short'>晚饭</label></view>
+      <view class="c1 ">
+      <label class='long'>晚上</label></view>
+    </view>
+    <view class="car ">
+      <label class='date'>28</label>
+      <label class='week'>一</label>
+      <view class="c1 ">
+      <view id='10' class="c3 {{select[0].m? 'selected':'unselet'}}" bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='20' class="c2 {{select[0].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='30' class="c3 {{select[0].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='40' class="c2 {{select[0].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='50' class="c3 {{select[0].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car ">
+      <label class='date'>29</label>
+      <label class='week'>二</label>
+      <view class="c1 ">
+      <view id='11' class="c3 {{select[1].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='21' class="c2 {{select[1].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='31' class="c3 {{select[1].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='41' class="c2 {{select[1].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='51' class="c3 {{select[1].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car ">
+      <label class='date'>30</label>
+      <label class='week'>三</label>
+      <view class="c1 ">
+      <view id='12' class="c3 {{select[2].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='22' class="c2 {{select[2].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='32' class="c3 {{select[2].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='42' class="c2 {{select[2].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='52' class="c3 {{select[2].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car ">
+      <label class='date'>1</label>
+      <label class='week'>四</label>
+      <view class="c1 ">
+      <view id='13' class="c3 {{select[3].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='23' class="c2 {{select[3].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='33' class="c3 {{select[3].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='43' class="c2 {{select[3].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='53' class="c3 {{select[3].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car friday">
+      <label class='date'>2</label>
+      <label class='week'>五</label>
+      <view class="c1 ">
+      <view id='14' class="c3 {{select[4].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='24' class="c2 {{select[4].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='34' class="c3 {{select[4].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='44' class="c2 {{select[4].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='54' class="c3 {{select[4].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car ">
+      <label class='date'>3</label>
+      <label class='week'>六</label>
+      <view class="c1 ">
+      <view id='15' class="c3 {{select[5].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='25' class="c2 {{select[5].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='35' class="c3 {{select[5].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='45' class="c2 {{select[5].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='55' class="c3 {{select[5].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <view class="car ">
+      <label class='date'>4</label>
+      <label class='week'>日</label>
+      <view class="c1 ">
+      <view id='16' class="c3 {{select[6].m? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='26' class="c2 {{select[6].l? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='36' class="c3 {{select[6].a? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='46' class="c2 {{select[6].d? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+      <view class="c1 ">
+      <view id='56' class="c3 {{select[6].e? 'selected':'unselet'}}"bindtap='select_slot'></view></view>
+    </view>
+    <button class='post' bindtap='submita'>提交选择</button>
+    <button class='invite'>请朋友一起来凑时间</button>
+  </view>
+  
+</view>
+</view>
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" style="{{currentTab==1?'box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)':''}}">
+  <navigator url="../index/index?currentTab=0" class="tab-item">
+    <image src='../../findATime/new.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
+  </navigator>
+  <navigator url="../index/index?currentTab=1" class="tab-item" >
+     <image src='../../findATime/his.png' style="height:2rem;width:2rem;margin-bottom:0.5rem;"></image>
+  </navigator>
+</scroll-view>

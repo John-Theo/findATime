@@ -1,0 +1,52 @@
+<!--index.wxml-->
+
+<view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item class="page">
+      <view class='card'>
+
+        <form bindsubmit="create_new" class=''>
+          <view class='createN'>
+            <input type='text' placeholder-class='name' placeholder='填写项目名称' class='input_name' bindinput='mytextInput' maxlength='20' value="{{proj_name}}"></input>
+            <label class='info'>
+              请朋友们从
+              <picker mode="date" value="{{date}}" start="{{date}}" end="2020-01-01" bindchange="bindDateChange" style="margin-left:20rpx;">
+                <view class="picker">{{date}}</view>
+              </picker>
+            </label>
+            <label class='info'>开始的7天内，选空余时间</label>
+          </view>
+          <button class='newproj' formType="submit" bindtap='creatProj' type="primary" plain="true">建立项目</button>
+        </form>
+
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h page">
+        <block wx:for="{{itemIdList}}" wx:key="itemIdList.name">
+          <view class="item-ans">
+            <view class="expertInfo" id="{{item.hex}}" bindtap='detail'>
+              <view class="title">{{item.name}}</view>
+              <view class="filled">{{item.num}}人已填</view>
+            </view>
+            <view id="{{item.hex}}" bindtap='delete_item'>
+            <view class="icon">
+              <i class="fa fa-trash-o del_icon fa-1x"></i>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <view class="page">
+    <view class="tab-h">
+      <view class="{{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">
+        <image src='../../findATime/new.png' class="nav_pic"></image>
+      </view>
+      <view class="{{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">
+        <image src='../../findATime/his.png' class="nav_pic"></image>
+      </view>
+    </view>
+  </view>
+</view>
