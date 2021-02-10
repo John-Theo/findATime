@@ -43,10 +43,10 @@
   </view>
   <view class="tab-h">
     <view bindtap='toNew'>
-      <image src='../../findATime/new.png' class="nav_pic"></image>
+      <image src='../../img/new.png' class="nav_pic"></image>
     </view>
     <view bindtap='toHis'>
-      <image src='../../findATime/his.png' class="nav_pic"></image>
+      <image src='../../img/his.png' class="nav_pic"></image>
     </view>
   </view>
 </view>
